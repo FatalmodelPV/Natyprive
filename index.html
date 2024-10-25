@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo Adulto 🔥</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('images/fundopessoal.jpg'); /* Substitua pela URL da sua imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #ff4081;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6); /* Um fundo escuro semi-transparente */
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2); /* Fundo branco semi-transparente */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .service {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semi-transparente */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .service h2 {
+            color: #ff4081;
+        }
+        .service p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        button:hover {
+            background-color: #e91e63;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Define uma grade responsiva */
+            gap: 15px; /* Espaçamento entre itens */
+            margin: 20px 0;
+        }
+        .gallery img, .gallery video {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        footer {
+            margin-top: 30px;
+            color: #ff4081;
+        }
+        footer a {
+            color: #ff4081;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Estilos do modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .modal-content button {
+            margin: 10px;
+            background-color: #ff4081;
+        }
+        .qr-code {
+            width: 200px;
+            height: 200px;
+        }
+        .close-modal {
+            background-color: #ff4081;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="container">
+            <h1>Escolha o Serviço que Te Faz Delirar 🔥💋</h1>
+
+            <!-- Galeria de Fotos e Vídeos -->
+            <div class="gallery">
+                <img src="https://via.placeholder.com/150" alt="Foto 1">
+                <img src="https://via.placeholder.com/150" alt="Foto 2">
+                <img src="https://via.placeholder.com/150" alt="Foto 3">
+                <img src="https://via.placeholder.com/150" alt="Foto 4">
+                <!-- Vídeos na galeria -->
+                <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+                <video src="https://www.w3schools.com/html/movie.mp4" controls></video>
+            </div>
+
+            <!-- Serviço de Fotos Exclusivas -->
+            <div class="service">
+                <h2>Fotos Exclusivas 🔥📸</h2>
+                <p>Quer ver fotos que vão te deixar sem fôlego? 😏👀 Solicite um pacote de fotos provocantes por apenas <strong>R$50</strong>!</p>
+                <button onclick="selecionarMetodoPagamento('Fotos Exclusivas', 50)">Pedir Agora pelo WhatsApp 💌</button>
+            </div>
+
+            <!-- Serviço de Vídeos Quentes -->
+            <div class="service">
+                <h2>Vídeos Quentes 🔥🎥</h2>
+                <p>Vídeos picantes feitos só pra você 😘🎬. Aproveite por apenas <strong>R$100</strong> e sinta a conexão.</p>
+                <button onclick="selecionarMetodoPagamento('Vídeo Quente', 100)">Pedir Agora pelo WhatsApp 🔥</button>
+            </div>
+
+            <!-- Serviço de Chamada ao Vivo -->
+            <div class="service">
+                <h2>Chamada ao Vivo 🔥📞</h2>
+                <p>Quer algo mais intenso? 😈💋 Marque uma chamada ao vivo de 30 minutos e deixe seus desejos rolarem. Apenas <strong>R$150</strong>.</p>
+                <button onclick="selecionarMetodoPagamento('Chamada ao Vivo', 150)">Pedir Agora pelo WhatsApp 🔥💬</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para selecionar método de pagamento -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <h2>Selecione a Forma de Pagamento</h2>
+            <button onclick="mostrarPix()">Pagar com Pix</button>
+            <button onclick="mostrarCartao()">Pagar com Cartão de Crédito</button>
+            <button class="close-modal" onclick="fecharModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- Modal para Pix -->
+    <div id="pixModal" class="modal">
+        <div class="modal-content">
+            <h2>Pagamento com Pix</h2>
+            <img src="https://via.placeholder.com/200" alt="QR Code Pix" class="qr-code">
+            <p>Chave Pix: 12345678910</p>
+            <button class="close-modal" onclick="fecharModal()">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Script para controlar o modal -->
+    <script>
+        function selecionarMetodoPagamento(servico, valor) {
+            document.getElementById('paymentModal').style.display = 'flex';
+        }
+
+        function mostrarPix() {
+            document.getElementById('paymentModal').style.display = 'none';
+            document.getElementById('pixModal').style.display = 'flex';
+        }
+
+        function mostrarCartao() {
+            document.getElementById('paymentModal').style.display = 'none';
+            const linkCartao = 'https://fatalmodelpv.github.io/paguefacil/'; // Coloque o link de pagamento com cartão aqui
+            window.open(linkCartao, '_blank');
+        }
+
+        function fecharModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+            document.getElementById('pixModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
